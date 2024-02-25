@@ -1,0 +1,55 @@
+:root {
+    font-family: "Noto Sans", sans-serif;
+    --background-color: rgba(29, 29, 29, 0.2);
+}
+
+@font-face {
+    font-family: "Heavy Heap";
+    src: url("fonts/heavy-heap-rg.otf") format(".otf");
+}
+
+body {
+    margin: 0;
+    display: flex;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    min-height: 100vh;
+    flex: 1;
+}
+
+.image-container {
+    display: inline-block;
+    background-image: url("side-pic.jpg");
+    background-color: #cccccc;
+    background-size: cover;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    height: 100vh;
+    min-width: 400px;
+    text-align: center;
+}
+
+.title {
+    font-size: 60px;
+    margin-top: 40%;
+    font-family: "Heavy Heap";
+    background-color: var(--background-color);
+}
+
+.credit {
+    position: fixed;
+    bottom: 1%;
+    left: 100px;
+    background-color: var(--background-color);
+    font-size: 12px;
+}
+
+a {
+    color: white;
+}
