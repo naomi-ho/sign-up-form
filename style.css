@@ -5,7 +5,8 @@
 
 @font-face {
     font-family: "Heavy Heap";
-    src: url("fonts/heavy-heap-rg.otf") format(".otf");
+    src: url("fonts/heavy-heap-rg.otf") format("opentype"), /* Modern Browsers */
+         url("fonts/heavy-heap-rg.ttf") format("truetype"); /* Legacy Browsers */
 }
 
 body {
@@ -25,6 +26,9 @@ body {
     display: inline-block;
     background-image: url("side-pic.jpg");
     background-color: #cccccc;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     color: white;
     background-position: center;
@@ -39,14 +43,14 @@ body {
     font-size: 60px;
     margin-top: 40%;
     font-family: "Heavy Heap";
-    background-color: var(--background-color);
+    background-color: var(--background-color, #1d1d1d);
 }
 
 .credit {
     position: fixed;
     bottom: 1%;
     left: 100px;
-    background-color: var(--background-color);
+    background-color: var(--background-color, #1d1d1d);
     font-size: 12px;
 }
 
