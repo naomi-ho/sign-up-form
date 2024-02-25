@@ -10,8 +10,7 @@
 
 @font-face {
     font-family: "Heavy Heap";
-    src: url("fonts/heavy-heap-rg.otf") format("opentype"), /* Modern Browsers */
-         url("fonts/heavy-heap-rg.ttf") format("truetype"); /* Legacy Browsers */
+    src: url("fonts/heavy-heap-rg.otf") format("opentype")
 }
 
 html, body {
@@ -39,14 +38,14 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     border: none;
-    height: 100vh; /* Adjusted height for responsiveness */
+    height: 100vh;
     width: 40vw;
     text-align: center;
 }
 
 .title {
     font-size: 60px;
-    margin-top: 45vh; /* Adjusted margin for responsiveness */
+    margin-top: 45vh;
     font-family: "Heavy Heap";
     background-color: var(--text-color, #1d1d1d);
 }
@@ -125,7 +124,7 @@ input {
     
     .image-container {
         width: 100vw;
-        height: 30vh; /* Adjusted height for smaller screens */
+        height: 30vh;
     }
 
     .title {
