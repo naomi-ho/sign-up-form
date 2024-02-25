@@ -14,42 +14,39 @@
          url("fonts/heavy-heap-rg.ttf") format("truetype"); /* Legacy Browsers */
 }
 
-body {
+html, body {
     width: 100%;
     height: 100%;
-    padding: 0;
     margin: 0;
+    padding: 0;
+}
+
+body {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .left-side {
-    display: flex;
-    flex-direction: column;
-    max-width: 450px;
-    min-height: 100vh;
-    flex: 1;
+    width: 40%;
 }
 
 .image-container {
     display: inline-block;
     background-image: url("side-pic.jpg");
     background-color: #cccccc;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     color: white;
     background-position: center;
     background-repeat: no-repeat;
     border: none;
-    height: 100vh;
-    max-width: 500px;
+    height: 100vh; /* Adjusted height for responsiveness */
+    width: 40vw;
     text-align: center;
 }
 
 .title {
     font-size: 60px;
-    margin-top: 45vh;
+    margin-top: 45vh; /* Adjusted margin for responsiveness */
     font-family: "Heavy Heap";
     background-color: var(--text-color, #1d1d1d);
 }
@@ -65,14 +62,19 @@ body {
 }
 
 .right-side {
+    width: 60%;
     color: var(--font-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+form {
+    display: flex;
+    flex-flow: row wrap;
+}
+
 .container {
-    margin: 0 auto;
     padding: 40px;
 }
 
@@ -80,22 +82,18 @@ h1 {
     margin-bottom: 40px;
 }
 
-.name-container, .details-container, .password-container {
-    display: flex;
-    gap: 30px;
-    justify-content: flex-start;
-}
-
-.form-input {
+.form-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    justify-content: center;
 }
 
 input {
     height: 40px;
-    width: 300px;
+    width: calc(20vw - 10px);
     border-radius: 5px;
+    margin-right: 10px;
     margin-bottom: 20px;
     padding-left: 7px;
 }
@@ -118,4 +116,38 @@ input {
 
 #create-btn:active {
     color: var(--light-go-color);
+}
+
+@media (max-width: 768px) {
+    .left-side, .right-side {
+        width: 100%;
+    }
+    
+    .image-container {
+        width: 100vw;
+        height: 30vh; /* Adjusted height for smaller screens */
+    }
+
+    .title {
+        margin-top: 20vw;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        display: inline;
+    }
+
+    input {
+        width: 50vw;
+    }
 }
