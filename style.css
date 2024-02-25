@@ -3,6 +3,7 @@
     --text-color: rgba(29, 29, 29, 0.2);
     --font-color: rgb(255, 255, 255);
     --go-color: rgb(50, 187, 50);
+    --light-go-color: hsl(120, 58%, 76%);
     font-family: "Roboto", sans-serif;
     background-color: var(--background-color);
 }
@@ -109,4 +110,12 @@ input {
     border: none;
     border-radius: 5px;
     border-style: solid;
+}
+
+#create-btn:hover {
+    cursor: pointer;
+}
+
+#create-btn:active {
+    color: var(--light-go-color);
 }
